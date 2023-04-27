@@ -28,7 +28,7 @@ const FormValues = z.object({
   Title: z.string().min(1, {
     message: 'Please enter a joke title',
   }),
-  Joke: z.string().min(1, { message: 'Please enter a joke!' }),
+  Body: z.string().min(1, { message: 'Please enter a joke!' }),
 });
 
 interface JokesFormProps {
@@ -56,7 +56,7 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
           const defaults = {
             Author: res.data.Author,
             Title: res.data.Title,
-            Joke: res.data.Joke,
+            Body: res.data.Body,
           };
           reset(defaults);
         } catch (err) {
@@ -83,7 +83,6 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
     const joke = {
       ...data,
       CreatedAt: dayjs(new Date()).format('YYYY-MM-DD'),
-      Body: data.Joke,
       Views: Math.ceil(Math.random() * 100),
     };
     try {
@@ -152,21 +151,21 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
 
       <div className="jokes-form_tabs">
         <TextField
-          {...register('Joke')}
-          error={!!errors.Joke}
-          defaultValue={joke ? joke.Joke : null}
+          {...register('Body')}
+          error={!!errors.Body}
+          defaultValue={joke ? joke.Body : null}
           type="text"
           label={'Joke'}
           multiline
           rows={4}
           disabled={isSubmitting}
-          id="joke"
+          id="body"
           variant="outlined"
           sx={{ width: { sm: 200, md: 300 } }}
           InputLabelProps={{ shrink: true }}
         />
 
-        {errors.Joke && <p className="error-message">{errors.Joke.message}</p>}
+        {errors.Body && <p className="error-message">{errors.Body.message}</p>}
       </div>
       <div className="jokes-form_button-container">
         <Button variant="outlined" type="submit">

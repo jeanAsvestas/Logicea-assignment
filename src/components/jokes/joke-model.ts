@@ -11,7 +11,6 @@ export class Joke {
   Author: string;
   Body: string;
   CreatedAt: string;
-  Joke: string;
   Title: string;
   Views: number;
   id?: number;
@@ -20,7 +19,6 @@ export class Joke {
     this.Author = joke.Author;
     this.Body = joke.Body;
     this.CreatedAt = joke.CreatedAt;
-    this.Joke = joke.Joke;
     this.Title = joke.Title;
     this.Views = joke.Views;
     this.id = joke.id;
