@@ -7,12 +7,10 @@ const userSlice = createSlice({
   reducers: {
     login(state, action) {
       state.user = action.payload;
-      console.log(state.user);
       localStorage.setItem('user-token', action.payload);
     },
     logout(state) {
       state.user = null;
-      console.log(state.user);
       localStorage.removeItem('user-token');
     },
   },
@@ -20,9 +18,7 @@ const userSlice = createSlice({
 
 export const userActions = userSlice.actions;
 export const selectUser = () => {
-  const result = localStorage.getItem('user-token') || null;
-  console.log(result);
-  return result;
+  return localStorage.getItem('user-token') || null;
 };
 
 export default userSlice;

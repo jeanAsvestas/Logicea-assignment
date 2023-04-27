@@ -14,10 +14,8 @@ export const JokesTable = () => {
     const getIt = async () => {
       try {
         const res = await jokesApi.getJokesByPage(currentPage, jokesPerPage);
-        console.log(res.data);
         setJokes(res.data);
       } catch (err) {
-        console.log(err);
         window.alert('An error occured, please try again later');
       }
     };

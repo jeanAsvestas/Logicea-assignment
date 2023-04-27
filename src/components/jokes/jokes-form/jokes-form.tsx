@@ -61,7 +61,6 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
           reset(defaults);
         } catch (err) {
           window.alert('an error occured, please try again later');
-          console.log(err);
         }
       };
 
@@ -98,7 +97,6 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
       navigate('/');
     } catch (err) {
       window.alert('an error occured, please try again later');
-      console.log(err);
     }
   };
 
@@ -108,7 +106,7 @@ export const JokesForm = ({ isAddMode }: JokesFormProps) => {
       window.alert('joke deleted');
       navigate('/');
     } catch (err) {
-      console.log(err);
+      window.alert('an error occured, please try again later');
     }
   };
 
