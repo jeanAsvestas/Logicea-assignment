@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/home-page/Home';
-import { NavBar } from './components/navbar/NavBar';
+import { NavBar } from './components/navbar/navigation-bar';
 import { ProtectedRoute } from './protected-route/protected-route';
 import { JokesForm } from './components/jokes/jokes-form/jokes-form';
 import { ErrorComp } from './components/error/error-component';

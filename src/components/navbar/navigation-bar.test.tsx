@@ -1,5 +1,5 @@
 import TestRenderer from 'react-test-renderer';
-import { NavBar } from './NavBar';
+import { NavBar } from './navigation-bar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 it('renders the component as expected', () => {
