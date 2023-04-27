@@ -1,0 +1,18 @@
+.jokes-form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  button,
+  label,
+  div,
+  div div input {
+    color: inherit;
+    border-color: inherit;
+    font-family: inherit;
+  }
+  .jokes-form_button-container {
+    display: flex;
+    gap: 5px;
+  }
+}

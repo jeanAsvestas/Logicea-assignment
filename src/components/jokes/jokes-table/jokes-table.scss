@@ -1,0 +1,19 @@
+.table-container__table {
+  border-collapse: collapse;
+  min-width: 400px;
+
+  thead td {
+    text-align: center;
+    font-weight: 800;
+  }
+
+  tbody td {
+    border-left: 1px solid;
+    padding: 5px;
+  }
+
+  td:first-child,
+  th:first-child {
+    border-left: none;
+  }
+}
